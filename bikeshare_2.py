@@ -107,7 +107,6 @@ def station_stats(df):
     start_time = time.time()
 
     # display most commonly used start station
-
     most_common_start_station = df['Start Station'].mode()[0]
     print("The most common start station is: ", most_common_start_station)
 
@@ -124,8 +123,8 @@ def station_stats(df):
 
 
 def trip_duration_stats(df):
+    
     """Displays statistics on the total and average trip duration."""
-
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
@@ -146,7 +145,6 @@ def user_stats(df):
     start_time = time.time()
 
     # Display counts of user types
-
     print("User Types in counting: ", df['User Type'].value_counts())
 
     try:
@@ -183,6 +181,7 @@ def main():
         view_data = input('\nWould you like to view the raw data? Enter yes or no.\n')
         count = 0
         while view_data.lower() == 'yes':
+            # Show message when user view all data records
             if count >= df.shape[0]:
                 print("All of records was displayed")
                 break
