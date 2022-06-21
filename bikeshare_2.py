@@ -179,6 +179,7 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
 
+        # Allow user to view the raw data
         view_data = input('\nWould you like to view the raw data? Enter yes or no.\n')
         count = 0
         while view_data.lower() == 'yes':
