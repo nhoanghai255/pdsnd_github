@@ -107,7 +107,6 @@ def station_stats(df):
     start_time = time.time()
 
     # display most commonly used start station
-
     most_common_start_station = df['Start Station'].mode()[0]
     print("The most common start station is: ", most_common_start_station)
 
@@ -124,8 +123,8 @@ def station_stats(df):
 
 
 def trip_duration_stats(df):
+    
     """Displays statistics on the total and average trip duration."""
-
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
@@ -146,7 +145,6 @@ def user_stats(df):
     start_time = time.time()
 
     # Display counts of user types
-
     print("User Types in counting: ", df['User Type'].value_counts())
 
     try:
@@ -186,7 +184,6 @@ def main():
             if count >= df.shape[0]:
                 print("All of records was displayed")
                 break
-            # Allow user to review the next 5 records when it can be continued    
             else:
                 print(df.iloc[count:count + 5])
                 count = count + 5
