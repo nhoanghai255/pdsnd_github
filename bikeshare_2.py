@@ -182,9 +182,11 @@ def main():
         view_data = input('\nWould you like to view the raw data? Enter yes or no.\n')
         count = 0
         while view_data.lower() == 'yes':
+            # Show message when user view all data records
             if count >= df.shape[0]:
                 print("All of records was displayed")
                 break
+            # Allow user to review the next 5 records when it can be continued    
             else:
                 print(df.iloc[count:count + 5])
                 count = count + 5
